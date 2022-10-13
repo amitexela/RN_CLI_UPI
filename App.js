@@ -15,7 +15,8 @@ import {
   Text,
   useColorScheme,
   View,
-  Button
+  Button,
+  Alert
 } from 'react-native';
 
 import {
@@ -53,16 +54,18 @@ const App = () => {
               RNUpiPayment.initializePayment({
                 vpa: 'amitrathee987@ybl',
                 payeeName: 'Amit',
-                amount: '10',
+                amount: '1',
                 transactionRef: 'aasf-332-aoei-fn'
               }, successCallback, failureCallback);
     
               function successCallback(data) {
                 console.log(data);
+                Alert.alert('Success', JSON.stringify(data));
               }
     
               function failureCallback(data) {
                 console.log(data);
+                Alert.alert('Failure', JSON.stringify(data));
               }
             }}
             title="Start Payment"
