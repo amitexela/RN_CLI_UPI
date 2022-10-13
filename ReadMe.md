@@ -2,6 +2,7 @@
 
 ### To run this project
 npm install
+
 npm start
 
 ### To run this project in android
